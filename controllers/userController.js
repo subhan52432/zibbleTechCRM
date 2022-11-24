@@ -18,7 +18,7 @@ const registerUser = asyncHandler(async (req, res, next) => {
     if (userExists) {
         return res.status(400).json({
             success: false,
-            msg: 'Entered email id already registered with us. Login to continue'
+            message: 'Entered email id already registered with us. Login to continue'
         })
     }
 
@@ -38,7 +38,7 @@ const registerUser = asyncHandler(async (req, res, next) => {
         if (err) return next(err);
         res.status(201).json({
             success: true,
-            msg: 'Account Created Sucessfully. Please log in.'
+            message: 'Account Created Sucessfully. Please log in.'
         });
     });
 })
@@ -58,7 +58,6 @@ const authUser = asyncHandler(async (req, res) => {
             employeeName: user.employeeName,
             email: user.email,
             cnic_passport: user.cnic_passport,
-            password: user.password,
             dateOfJoining: user.dateOfJoining,
             department: user.department,
             role: user.role,
