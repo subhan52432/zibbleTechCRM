@@ -68,7 +68,7 @@ const authUser = asyncHandler(async (req, res) => {
     } else {
         res.status(401).json({
             success: false,
-            msg: 'Unauthorized User'
+            message: 'Unauthorized User'
         })
     }
 })
