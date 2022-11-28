@@ -14,10 +14,10 @@ connectDB();
 const app = express();
 
 var cors = require('cors')
-//app.use(cors({origin: false, credentials: false}));
-//app.options('*',cors())
+app.use(cors());
+app.options('*',cors())
 
-app.use(cors())
+
 
 app.use(formData.parse());
 
