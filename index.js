@@ -14,7 +14,7 @@ connectDB();
 const app = express();
 
 var cors = require('cors')
-app.use(cors({origin: true, credentials: true}));
+app.use(cors({origin: false, credentials: false}));
 app.options('*',cors())
 
 app.use(formData.parse());
